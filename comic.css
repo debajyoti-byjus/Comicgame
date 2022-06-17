@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+/* 
+@font-face {
+    font-family: Carter One;
+    src: url('./Carter_One/CarterOne-Regular.ttf');
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+body {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+
+
+}
+
+.comicContainer {
+    position: absolute;
+    width: 76%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    left: 12%;
+    border-radius: 0.2rem;
+    border: 0.3rem solid rgb(65, 65, 65);
+    transform: translateY(-0.5%);
+}
+
+#leftPage,
+#rightPage {
+    position: absolute;
+    width: 45.5%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#leftPage {
+    right: 53%;
+}
+
+#rightPage {
+    left: 53%;
+}
+
+.classSlowFade {
+    animation: fadeaway 0.5s linear forwards;
+}
+
+@keyframes fadeaway {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* START SCREEN STYLING ENDS HERE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*styling the first div container*/
+#firstDiv {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    bottom: 0;
+    width: 177.77vh;
+    height: 100vh;
+    height: 96vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* background: linear-gradient(to right, rgb(137, 3, 190), rgb(47, 7, 192)); */
+    font-size: 4vh;
+}
+
+.buttonAnimation {
+    animation: btnAnim 0.4s ease-in-out forwards;
+    pointer-events: none;
+}
+
+@keyframes btnAnim {
+    0% {
+        opacity: 0.5;
+        transform: scaleY(0.5);
+        transform: scaleX(0.8);
+    }
+
+    40% {
+        transform: scaleY(2);
+        transform: scaleX(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scaleY(1);
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/* ------------------------------------ */
+.fromLeftToLeftPicAnimation {
+    animation: fromLeftToLeftpicAnim 0.6s linear forwards;
+}
+
+@keyframes fromLeftToLeftpicAnim {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* ------------------------------------ */
+
+.fromRightToLeftPicAnimation {
+    animation: fromRightToLeftpicAnim 0.6s linear forwards;
+}
+
+@keyframes fromRightToLeftpicAnim {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(80%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.fromRightToLeftPicAnimationOpposite {
+    animation: fromRightToLeftpicAnimOpposite 0.6s linear forwards;
+}
+
+@keyframes fromRightToLeftpicAnimOpposite {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(80%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* ------------------------------------ */
+.fromRightToRightpicAnim {
+    animation: fromRightToRightpicAnim 0.6s linear forwards;
+}
+
+@keyframes fromRightToRightpicAnim {
+    0% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+/* ------------------------------------ */
+.fromLeftToRightPicAnimation {
+    animation: fromLeftToRightpicAnim 0.6s linear forwards;
+}
+
+@keyframes fromLeftToRightpicAnim {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(-80%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+#inlineFrame1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    left: 0;
+    right: 0;
+
+    /* display: none; */
+}
+
+#inlineFrame2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    left: 0;
+    right: 0;
+
+    /* display: none; */
+}
+
+#inlineFrame3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    left: 0;
+    right: 0;
+
+    /* display: none; */
+}
+
+#finish {
+    position: absolute;
+    right: 2%;
+    top: 2%;
+    width: 12%;
+    height: 10%;
+    font-size: 120%;
+    background: linear-gradient(to right, rgb(255, 220, 61), rgb(255, 115, 0));
+    color: black;
+    border: 0.4rem solid #ffffff;
+    z-index: 100;
+    display: none;
+}
+
+#finish:hover {
+    cursor: pointer;
+}
+
+#playgame1id {
+    left: 24.2%;
+    bottom: 44.5%;
+}
+
+#playgame2id {
+    left: 81%;
+    bottom: 35.5%;
+}
+
+#playgame3id {
+    left: 40.5%;
+    bottom: 7%;
+}
+
+.navBtn2 {
+    position: absolute;
+    width: 6%;
+    height: 12%;
+    font-size: 40%;
+    font-weight: 900;
+    /* border-radius: 2rem; */
+    background: linear-gradient(to right, rgb(255, 220, 61), rgb(255, 115, 0));
+    color: black;
+    border: 0.4rem solid #ffffff;
+    animation: buttonOscillationColours 600ms ease-in-out infinite alternate;
+    z-index: 30;
+}
+
+.navBtn2:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+    background: linear-gradient(to right, rgb(208, 255, 0), rgb(255, 174, 0));
+
+}
+
+@keyframes buttonOscillationColours {
+    0% {
+        transform: scaleY(1) scaleX(1);
+        opacity: 0.9;
+        border: 0.4rem solid #ba003e;
+
+    }
+
+    100% {
+        transform: scaleY(1.05) scaleX(1.05);
+        opacity: 1;
+        border: 0.4rem solid #ffffff;
+
+    }
+}
+
+
+
+
+
+
+
+/*This is the style of the Check answer buttom*/
+
+
+#backBtn {
+    /* background: none; */
+    left: -5%;
+    bottom: 0%;
+    cursor: url("./cursors/backPageCursor.png"), pointer;
+
+}
+
+#nextBtn {
+    right: -5%;
+    bottom: 0%;
+    cursor: url("./cursors/nextPageCursor.png"), pointer;
+
+}
+
+/* #nextBtn:hover {
+} */
+
+
+.navBtn {
+    position: absolute;
+    transition: 150ms;
+    z-index: 5;
+    height: 100%;
+    width: 20%;
+    /* animation: buttonOscillation 1s ease-in-out infinite alternate; */
+}
+
+/* .navBtn:hover {
+    cursor: pointer;
+} */
+
+@keyframes buttonOscillation {
+    0% {
+        transform: scaleY(1) scaleX(1);
+    }
+
+    100% {
+        transform: scaleY(1.2) scaleX(1.1);
+    }
+}
+
+
+
+.topBarStyle {
+    position: absolute;
+    width: 80%;
+    height: 0.4vh;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    border-radius: 0vh 0vh 1vh 1vh;
+    background: #08283c;
+    /* background: red; */
+
+}
+
+
+.bottomBarStyle {
+    position: absolute;
+    width: 80%;
+    height: 0.3vh;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    border-radius: 1vh 1vh 0vh 0vh;
+    background: #08283c;
+
+}
+
+
+
+
+
+@media only screen and (max-aspect-ratio:16/9) {
+
+    #firstDiv {
+        width: 100vw;
+        height: 54vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2.1vw;
+
+    }
+
+    #startScreen {
+        width: 100vw;
+        height: 56.25vw;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #greyBorder {
+        border-radius: 1.7vw;
+    }
+
+    #headingText {
+        font-size: 1.1vw;
+        padding: 8.4vw 5.6vw;
+        border-radius: 3.9vw;
+    }
+
+    #startBtn {
+        font-size: 3.37vw;
+        padding: 1.1vw 5.56vw;
+        /* border-radius: 1.68vw; */
+    }
+
+    #banner {
+        padding: 1.4vw;
+        padding-right: 5.6vw;
+        font-size: 3.4vw;
+        border-radius: 0vw 2.25vw 2.25vw 0vw;
+    }
+
+    .topBarStyle {
+        height: 0.25vw;
+        border-radius: 0vw 0vw 1vw 1vw;
+    }
+
+    .bottomBarStyle {
+        height: 0.25vw;
+        border-radius: 1vw 1vw 0vw 0vw;
+
+    }
+
+}
