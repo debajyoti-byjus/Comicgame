@@ -23,9 +23,18 @@ async function setPage(num) { //sets the nth page
     else {
         nextBtn.style.display = "block";
     }
+    hideallpages();
+    let leftElem = document.getElementsByClassName("page")[num - 1];
+    let rightElem = document.getElementsByClassName("page")[num]
 
-    leftPage.src = `./assets Pages/page ${num}.png`;
-    rightPage.src = `./assets Pages/page ${num + 1}.png`;
+    leftElem.style.display = "block";
+    rightElem.style.display = "block";
+
+    leftElem.classList.add("leftPage");
+    rightElem.classList.add("rightPage");
+
+    // leftPage.src = `./assets Pages/page ${num}.png`;
+    // rightPage.src = `./assets Pages/page ${num + 1}.png`;
 
     if (num == 11) {
 
@@ -118,9 +127,19 @@ async function setPage(num) { //sets the nth page
     }
 }
 
+function hideallpages() {
+    for (let i = 0; i < totalPages; i++) {
+        let elem = document.getElementsByClassName("page")[i];
+        elem.style.display = "none";
+        elem.classList.remove("leftPage");
+        elem.classList.remove("rightPage");
+
+    }
+}
+
 function goBack() {
-    n = n - 2;
-    setPage(n)
+    n = n - 2; -
+        setPage(n)
 }
 
 function goNext() {

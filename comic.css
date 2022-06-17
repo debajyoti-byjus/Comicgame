@@ -35,19 +35,19 @@ body {
     transform: translateY(-0.5%);
 }
 
-#leftPage,
-#rightPage {
+.page {
     position: absolute;
     width: 45.5%;
     top: 50%;
     transform: translateY(-50%);
+    display: none;
 }
 
-#leftPage {
+.leftPage {
     right: 53%;
 }
 
-#rightPage {
+.rightPage {
     left: 53%;
 }
 
